@@ -24,12 +24,12 @@ public class orderServiceUnitTest {
     orderServiceUnitTest() {
         order = new Order();
         order.setQuantity(1);
-        order.setClientId(200L);
+        order.setClientId(999999L);
     }
 
     @BeforeEach
     public void init() {
-
+        orderService.create(order);
     }
 
     @AfterEach
@@ -39,13 +39,11 @@ public class orderServiceUnitTest {
 
     @Test
     void create() {
-        orderService.create(order);
         Assertions.assertNotNull(orderRepository.getByClientId(order.getClientId()));
     }
 
     @Test
     void create_order_with_the_same_clientId_Should_Throw_Exception() {
-        orderService.create(order);
         Assertions.assertThrows(OrderExistedException.class, () -> orderService.create(order));
     }
 
