@@ -39,7 +39,7 @@ class BagServiceTest {
 
     @AfterEach
     void tearDown() {
-        //orderService.delete(order.getClientId());
+        orderService.delete(order.getClientId());
     }
 
     @Test
