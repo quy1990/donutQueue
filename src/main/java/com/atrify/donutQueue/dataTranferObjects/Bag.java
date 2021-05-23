@@ -7,9 +7,9 @@ import java.util.List;
 
 public class Bag {
 
-    public static int PRIORITY_NUMBER = 5;
+    public static int PRIORITY_NUMBER = 1000;
     int indexOfBag;
-    int CAPACITY = 5;
+    int CAPACITY = 50;
     int time_to_process = 5; // 5 Minutes
     List<Order> orders = new ArrayList<>();
 

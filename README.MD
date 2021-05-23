@@ -1,48 +1,21 @@
 # Read Me First
 
-The following was discovered as part of building this project:
-
-* The JVM level was changed from '16' to '11', review
-  the [JDK Version Range](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions#jdk-version-range)
-  on the wiki for more details.
-
 # Getting Started
 
-### import DB
+### 1 import DB
 
 import atrify.sql in your DB
 
-### SWAGGER TO TEST REST API
+### 2 SWAGGER TO TEST REST API
 
 http://localhost:8080/swagger-ui/
 
-### configure database connection
+Ich habe 2 Endpunkte für Manager und Jim angelegt:
 
-spring.datasource.url=jdbc:mysql://<IP-or-Domain-of-Database>:3306/atrify
+* V1(version 1) Ich habe Queue in Java benutzt, um die Bags zu verwalten
+* V2(version 1) Ich hole alle die Orders in MySQl, die nach Priority und Created_date zuzuordnen
 
-### Reference Documentation
+V2 kann schneller als V1 sein, weil alle Orders in Mysql vorbereitet werden und Java muss nur sie holen und bearbeiten.
+  
 
-For further reference, please consider the following sections:
-
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.4.5/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.4.5/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle/#boot-features-jpa-and-spring-data)
-
-### Guides
-
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-
-### Additional Links
-
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
